@@ -27,7 +27,7 @@ export default function ServiceCarousel({
       <CarouselContent>
         {images.map((img, index) => (
           <CarouselItem key={index}>
-            <div className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-md">
+            <div className="relative w-full mx-auto h-[400px] rounded-2xl overflow-hidden shadow-md">
               <Image
                 src={img}
                 alt={`${title} ${index + 1}`}
@@ -40,8 +40,8 @@ export default function ServiceCarousel({
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="ml-7" />
+      <CarouselNext className="mr-7" />
     </Carousel>
   );
 }

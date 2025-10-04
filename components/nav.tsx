@@ -164,7 +164,7 @@ const Nav = () => {
             </button>
           </SheetTrigger>
           <SheetContent side="right" className="w-64">
-            <div className="flex flex-col gap-6 mt-8 font-montserrat text-center pt-10">
+            <div className="flex flex-col gap-6 mt-8 font-montserrat text-center pt-4">
               <Link href="/" className="text-lg font-medium hover:underline">
                 Home
               </Link>
@@ -176,7 +176,10 @@ const Nav = () => {
               </Link>
 
               <div>
-                <Link href="/" className="text-lg font-medium mb-2">
+                <Link
+                  href="/services/block-industry"
+                  className="text-lg font-medium mb-2"
+                >
                   Services
                 </Link>
                 <div className="flex flex-col gap-2 pl-3 mt-2">
