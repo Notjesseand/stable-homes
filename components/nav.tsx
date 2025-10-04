@@ -153,9 +153,9 @@ const Nav = () => {
       {/* Mobile Menu (Sheet) */}
       <div className="flex md:hidden items-center gap-4 font-montserrat">
         {/* Cart visible on mobile too */}
-        <Link href="/cart">
+        {/* <Link href="/cart">
           <IoCartOutline className="text-2xl cursor-pointer hover:text-orange-500 transition" />
-        </Link>
+        </Link> */}
 
         <Sheet>
           <SheetTrigger asChild>
@@ -176,26 +176,42 @@ const Nav = () => {
               </Link>
 
               <div>
-                <p className="text-lg font-medium mb-2">Services</p>
-                <div className="flex flex-col gap-2 pl-3">
-                  <Link href="/services/building" className="hover:underline">
-                    Building Construction
-                  </Link>
-                  <Link href="/services/renovation" className="hover:underline">
-                    Renovation & Remodeling
-                  </Link>
-                  <Link href="/services/civil" className="hover:underline">
-                    Civil Engineering
-                  </Link>
-                  <Link href="/services/interior" className="hover:underline">
-                    Interior Design
-                  </Link>
-                  <Link
-                    href="/services/project-management"
-                    className="hover:underline"
-                  >
-                    Project Management
-                  </Link>
+                <Link href="/" className="text-lg font-medium mb-2">
+                  Services
+                </Link>
+                <div className="flex flex-col gap-2 pl-3 mt-2">
+                  {[
+                    {
+                      href: "/services/building",
+                      label: "Building Construction",
+                    },
+                    {
+                      href: "/services/block-industry",
+                      label: "Industrial Scale Block Production",
+                    },
+                    {
+                      href: "/services/flooring-roofing",
+                      label: "Flooring and Roofing",
+                    },
+                    {
+                      href: "/services/architecture-design",
+                      label: "Architecture Design",
+                    },
+                    {
+                      href: "/services/renovation",
+                      label: "Renovation & Remodeling",
+                    },
+                    { href: "/services/civil", label: "Civil Engineering" },
+                    { href: "/services/interior", label: "Interior Design" },
+                    {
+                      href: "/services/project-management",
+                      label: "Project Management",
+                    },
+                  ].map((service, index) => (
+                    <Link href={service.href} className="underline ">
+                      {service.label}
+                    </Link>
+                  ))}
                 </div>
               </div>
 
