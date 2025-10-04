@@ -138,12 +138,6 @@ const Nav = () => {
               <Link href="/" className="text-lg font-medium hover:underline">
                 Home
               </Link>
-              <Link
-                href="/about"
-                className="text-lg font-medium hover:underline"
-              >
-                About Us
-              </Link>
 
               <div>
                 <p className="text-lg font-medium mb-2">Services</p>
@@ -187,12 +181,6 @@ const Nav = () => {
                 </div>
               </div>
 
-              <Link
-                href="/projects"
-                className="text-lg font-medium hover:underline"
-              >
-                Projects
-              </Link>
               <Link href="/contact">
                 <button className="bg-orange-500 rounded-lg px-4 py-2 text-white hover:bg-orange-600 transition">
                   Contact Us
