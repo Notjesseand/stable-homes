@@ -208,7 +208,11 @@ const Nav = () => {
                       label: "Project Management",
                     },
                   ].map((service, index) => (
-                    <Link href={service.href} className="underline ">
+                    <Link
+                      key={index}
+                      href={service.href}
+                      className="underline "
+                    >
                       {service.label}
                     </Link>
                   ))}
