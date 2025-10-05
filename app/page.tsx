@@ -50,7 +50,7 @@ const Page = () => {
 
   const why = [
     {
-      title: "Innovation Solutions",
+      title: "Innovative Solutions",
       desc: "We embrace modern construction techniques and smart technologies to deliver creative solutions that make every project more efficient, sustainable, and future-ready.",
       img: "",
       icon: HiOutlineLightBulb,
@@ -58,7 +58,7 @@ const Page = () => {
     {
       title: "",
       desc: "",
-      img: "/bg-5.jpg",
+      img: "/services/sketch-2.jpg",
       icon: "",
     },
     {
@@ -70,7 +70,7 @@ const Page = () => {
     {
       title: "",
       desc: "",
-      img: "/bg-4.jpg",
+      img: "/bg.jpg",
       icon: "",
     },
     {
@@ -82,7 +82,7 @@ const Page = () => {
     {
       title: "",
       desc: "",
-      img: "/workers.jpg",
+      img: "/services/roofing.jpg",
       icon: "",
     },
   ];
@@ -415,7 +415,7 @@ const Page = () => {
             className="w-full h-full px-6 md:px-8 py-2 items-center flex"
           >
             View all services
-            <BsArrowRight className="shake-horizontal ml-2 md:ml-3 text-sm" />
+            <IoArrowForwardCircleOutline className="ml-3 text-lg sm:text-xl shake-horizontal" />
           </Link>
         </motion.button>
       </div>
@@ -460,8 +460,8 @@ const Page = () => {
           </p>
           <p className="text-white mt-6 text-base sm:text-lg lg:text-xl max-w-lg">
             Don&apos;t wait any longer to bring your construction dreams to
-            life. Partner with Builtup and experience unparalleled service and
-            quality.
+            life. Partner with Stable Homes and experience unparalleled service
+            and quality.
           </p>
           <Link
             href="/quote"
