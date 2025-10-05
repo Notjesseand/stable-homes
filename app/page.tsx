@@ -324,7 +324,7 @@ const Page = () => {
         </motion.p>
 
         <motion.p
-          className="font-semibold text-3xl md:text-5xl mt-4 md:mt-6 text-center"
+          className="font-semibold text-3xl md:text-5xl mt-4 md:mt-6 text-center px-5"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
