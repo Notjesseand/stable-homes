@@ -155,7 +155,7 @@ const Page = () => {
   return (
     <div className="font-montserrat overflow-hidden">
       <Nav />
-      <div className="h-screen bg-[url(/bg-4.jpg)] bg-cover bg-center relative">
+      <div className="h-screen bg-[url(/services/crafting.jpg)] bg-cover bg-center relative">
         {/* overlay */}
         <div className="absolute inset-0 bg-black/70"></div>
 
@@ -214,7 +214,7 @@ const Page = () => {
           className="p-4 md:p-6 flex justify-center items-center"
         >
           <img
-            src="/workers.jpg"
+            src="/services/tractor.jpg"
             className="w-full max-w-lg rounded-3xl object-cover"
             alt="Workers"
           />
