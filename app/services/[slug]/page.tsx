@@ -174,6 +174,9 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       <main className="min-h-screen bg-white px-6 md:px-16 py-16 pt-36">
         {/* Service Details */}
         <section className="grid md:grid-cols-2 gap-10 items-center">
+          <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
+            {service.title}
+          </h1>
           {images.length > 1 ? (
             // @ts-ignore
             <ServiceCarousel images={images} title={service.title} />
@@ -192,9 +195,9 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           )}
 
           <div>
-            <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
+            {/* <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
               {service.title}
-            </h1>
+            </h1> */}
             <p className="mt-4 text-gray-600 leading-relaxed">
               {service.description}
             </p>
@@ -212,7 +215,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Booking Section */}
-        <section className="mt-20 bg-orange-50 rounded-3xl p-8 md:p-12 shadow-inner">
+        <section className="mt-20 bg-orange-50 rounded-3xl px-4 py-8 md:p-12 shadow-inner">
           <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-6">
             Book This Service
           </h2>
