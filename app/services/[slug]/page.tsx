@@ -267,20 +267,12 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
               required
               className="border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-400 outline-none"
             /> */}
-            <input
-              type="text"
-              name="date"
-              placeholder="Preferred Start Date (YYYY-MM-DD)"
-              onFocus={(e) => (e.target.type = "date")}
-              onBlur={(e) => (e.target.type = "text")}
-              className="border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-400 outline-none"
-            />
 
             <DatePicker
               selected={startDate}
               onChange={(date) => setStartDate(date)}
               placeholderText="Preferred Start Date"
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-400 outline-none mt-5"
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-400 outline-none font-montserrat"
             />
 
             <textarea
