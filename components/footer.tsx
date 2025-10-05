@@ -90,7 +90,7 @@ const Footer = () => {
           <ul className="space-y-2 text-sm">
             <li>Email: info@stablehomes.com</li>
             <li>Phone: +234 800 123 4567</li>
-            <li>Address: 123 Main Street, Lagos, Nigeria</li>
+            <li>Address: 123 Main Street, Abuja, Nigeria</li>
           </ul>
         </div>
 
