@@ -194,7 +194,7 @@ const Page = () => {
             className="text-base md:text-lg text-gray-200 mt-6 max-w-2xl leading-relaxed"
           >
             We specialize in turning visions into reality with exceptional
-            craftsmanship and meticulous attention to detail. With years of
+            craftsmanship and meticulous attention to detail. With decades of
             experience and a commitment to quality, we make your dream spaces
             come alive.
           </motion.p>
@@ -246,7 +246,7 @@ const Page = () => {
               viewport={{ once: true }}
               className="text-3xl md:text-5xl font-semibold mt-6 font-poppins text-center md:text-left"
             >
-              Crafting structures that last a lifetime
+              Where craftsmanship meets timeless design
             </motion.p>
 
             <motion.p
@@ -256,10 +256,10 @@ const Page = () => {
               viewport={{ once: true }}
               className="mt-5 text-sm md:text-base text-center md:text-left leading-relaxed"
             >
-              Crafting structures that last a lifetime requires a holistic
-              approach that integrates advanced materials, resilient design,
-              regular maintenance, and sustainability practices. By learning
-              from historical examples and leveraging modern technology.
+              Every structure we build blends durability with refined
+              craftsmanship — combining modern engineering, sustainable
+              materials, and precise execution to ensure lasting quality and
+              timeless appeal.
             </motion.p>
 
             {/* highlights */}
@@ -272,11 +272,11 @@ const Page = () => {
             >
               <p className="flex items-center text-sm md:text-base">
                 <IoIosCheckmarkCircleOutline className="text-xl md:text-2xl text-orange-400 mr-2" />
-                Comprehensive Services
+                Quality-driven Construction
               </p>
               <p className="flex items-center text-sm md:text-base">
                 <IoIosCheckmarkCircleOutline className="text-xl md:text-2xl text-orange-400 mr-2" />
-                Advanced Technology
+                Modern Equipment & Techniques
               </p>
               <p className="flex items-center text-sm md:text-base">
                 <IoIosCheckmarkCircleOutline className="text-xl md:text-2xl text-orange-400 mr-2" />
@@ -301,7 +301,9 @@ const Page = () => {
               </Link>
               <p className="flex items-center text-sm md:text-base">
                 <FaPhoneAlt className="mr-2 sm:mr-3" />
-                +234 909 909 7788
+                <a href="tel:+2349099097788" className="hover:underline">
+                  +234 909 909 7788
+                </a>
               </p>
             </motion.div>
           </div>
