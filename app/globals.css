@@ -154,18 +154,3 @@
     transform: translateX(-8px);
   }
 }
-
-/* in your global.css */
-input[type="date"] {
-  appearance: none;
-  -webkit-appearance: none;
-  background-color: #fff;
-  color: #333;
-  padding: 12px;
-  border-radius: 8px;
-  width: 100%;
-}
-
-input[type="date"]::-webkit-date-and-time-value {
-  text-align: left;
-}

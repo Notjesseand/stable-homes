@@ -117,6 +117,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import Nav from "@/app/quote/nav";
 import Footer from "@/components/footer";
 import { services } from "../serviceData";
@@ -134,6 +136,8 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
     date: "",
     message: "",
   });
+
+  const [startDate, setStartDate] = useState<Date | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -254,7 +258,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
               onChange={handleChange}
               className="border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-400 outline-none"
             />
-            <input
+            {/* <input
               type="date"
               name="date"
               placeholder="Preferred Start Date"
@@ -262,7 +266,23 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
               onChange={handleChange}
               required
               className="border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-400 outline-none"
+            /> */}
+            <input
+              type="text"
+              name="date"
+              placeholder="Preferred Start Date (YYYY-MM-DD)"
+              onFocus={(e) => (e.target.type = "date")}
+              onBlur={(e) => (e.target.type = "text")}
+              className="border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-400 outline-none"
             />
+
+            <DatePicker
+              selected={startDate}
+              onChange={(date) => setStartDate(date)}
+              placeholderText="Preferred Start Date"
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-400 outline-none mt-5"
+            />
+
             <textarea
               name="message"
               placeholder="Tell us a bit about your project"
