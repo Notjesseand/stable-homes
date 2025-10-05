@@ -604,7 +604,7 @@ const Page = () => {
             </p>
             <div className="space-y-4">
               <p className="flex items-center text-gray-700">
-                📍 <span className="ml-3">123 Main Street, Lagos, Nigeria</span>
+                📍 <span className="ml-3">123 Main Street, Abuja, Nigeria</span>
               </p>
               <p className="flex items-center text-gray-700">
                 📞 <span className="ml-3">+234 909 909 7788</span>
