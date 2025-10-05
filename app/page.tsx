@@ -203,7 +203,7 @@ const Page = () => {
       {/*  About Us*/}
       <div
         id="about"
-        className="min-h-screen bg-white grid grid-cols-1 md:grid-cols-2 gap-10"
+        className="min-h-screen bg-white grid grid-cols-1 md:grid-cols-2 gap-10 pt-10 lg:pt-4"
       >
         {/* image */}
         <motion.div
@@ -215,7 +215,7 @@ const Page = () => {
         >
           <img
             src="/services/tractor.jpg"
-            className="w-full max-w-lg rounded-3xl object-cover"
+            className="w-full max-w-lg rounded-3xl object-cover "
             alt="Workers"
           />
         </motion.div>
