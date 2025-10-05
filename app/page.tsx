@@ -301,7 +301,7 @@ const Page = () => {
               </Link>
               <p className="flex items-center text-sm md:text-base">
                 <FaPhoneAlt className="mr-2 sm:mr-3" />
-                <a href="tel:+2349099097788" className="hover:underline">
+                <a href="tel:+2349099097788" className="underline">
                   +234 909 909 7788
                 </a>
               </p>
