@@ -24,10 +24,10 @@ const Nav = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-slate-200 px-6 md:px-16 py-3 flex justify-between items-center z-50 shadow-md">
+    <nav className="fixed top-0 left-0 w-full bg-slate-200 px-6 md:px-16  py-2 sm:py-1 flex justify-between items-center z-50 shadow-md">
       {/* Logo */}
       <Link href="/">
-        <img src="/logo.png" alt="Logo" className="h-12 md:h-14" />
+        <img src="/stable-homes-logo.png" alt="Logo" className="h-16 md:h-20" />
       </Link>
 
       {/* Desktop Menu */}

@@ -5,7 +5,7 @@ import { useState } from "react";
 import Image from "next/image";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import Nav from "@/components/nav";
+import Nav from "@/components/block-boss/nav";
 import Footer from "@/components/footer";
 import { motion } from "framer-motion";
 import Slider from "react-slick";

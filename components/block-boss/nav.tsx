@@ -30,7 +30,7 @@ const Nav = () => {
     <nav className="fixed top-0 left-0 w-full bg-slate-200 px-6 md:px-16 py-3 sm:py-1 flex justify-between items-center z-50 shadow-md">
       {/* Logo */}
       <Link href="/">
-        <img src="/stable-homes-logo.png" alt="Logo" className="h-12 md:h-20" />
+        <img src="/block-boss-logo.png" alt="Logo" className="h-12 md:h-20" />
       </Link>
 
       {/* Desktop Menu */}
