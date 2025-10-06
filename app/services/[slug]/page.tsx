@@ -1,13 +1,45 @@
 // // app/services/[slug]/page.tsx
+// "use client";
 // import Image from "next/image";
 // import Link from "next/link";
+// import { useState } from "react";
+// import DatePicker from "react-datepicker";
+// import "react-datepicker/dist/react-datepicker.css";
 // import Nav from "@/app/quote/nav";
 // import Footer from "@/components/footer";
 // import { services } from "../serviceData";
 // import ServiceCarousel from "@/components/serviceCarousel";
+// import { useToast } from "@/components/ui/use-toast"; // optional toast if you use shadcn
 
 // export default function ServicePage({ params }: { params: { slug: string } }) {
 //   const service = services.find((s) => s.slug === params.slug);
+//   const { toast } = useToast();
+
+//   const [formData, setFormData] = useState({
+//     name: "",
+//     email: "",
+//     phone: "",
+//     date: "",
+//     message: "",
+//   });
+
+//   const [startDate, setStartDate] = useState<Date | null>(null);
+
+//   const handleChange = (
+//     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+//   ) => {
+//     setFormData({ ...formData, [e.target.name]: e.target.value });
+//   };
+
+//   const handleSubmit = (e: React.FormEvent) => {
+//     e.preventDefault();
+//     // You can later connect this to an API route or backend
+//     toast({
+//       title: "Booking request sent!",
+//       description: "We'll get back to you to confirm your project details.",
+//     });
+//     setFormData({ name: "", email: "", phone: "", date: "", message: "" });
+//   };
 
 //   if (!service) {
 //     return (
@@ -18,7 +50,6 @@
 //   }
 
 //   const otherServices = services.filter((s) => s.slug !== params.slug);
-
 //   const images =
 //     service.images && service.images.length > 0
 //       ? service.images
@@ -31,7 +62,11 @@
 //       <Nav />
 
 //       <main className="min-h-screen bg-white px-6 md:px-16 py-16 pt-36">
+//         {/* Service Details */}
 //         <section className="grid md:grid-cols-2 gap-10 items-center">
+//           <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
+//             {service.title}
+//           </h1>
 //           {images.length > 1 ? (
 //             // @ts-ignore
 //             <ServiceCarousel images={images} title={service.title} />
@@ -50,9 +85,9 @@
 //           )}
 
 //           <div>
-//             <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
+//             {/* <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
 //               {service.title}
-//             </h1>
+//             </h1> */}
 //             <p className="mt-4 text-gray-600 leading-relaxed">
 //               {service.description}
 //             </p>
@@ -69,7 +104,81 @@
 //           </div>
 //         </section>
 
-//         {/* other services */}
+//         {/* Booking Section */}
+//         <section className="mt-20 bg-orange-50 rounded-3xl px-4 py-8 md:p-12 shadow-inner">
+//           <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-6">
+//             Book This Service
+//           </h2>
+//           <p className="text-gray-600 mb-8">
+//             Ready to get started? Choose your preferred start date and share a
+//             few details — our team will reach out to confirm everything.
+//           </p>
+
+//           <form
+//             onSubmit={handleSubmit}
+//             className="grid md:grid-cols-2 gap-6 max-w-3xl"
+//           >
+//             <input
+//               type="text"
+//               name="name"
+//               placeholder="Your Name"
+//               value={formData.name}
+//               onChange={handleChange}
+//               required
+//               className="border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-400 outline-none"
+//             />
+//             <input
+//               type="email"
+//               name="email"
+//               placeholder="Email Address"
+//               value={formData.email}
+//               onChange={handleChange}
+//               required
+//               className="border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-400 outline-none"
+//             />
+//             <input
+//               type="tel"
+//               name="phone"
+//               placeholder="Phone Number"
+//               value={formData.phone}
+//               onChange={handleChange}
+//               className="border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-400 outline-none"
+//             />
+//             {/* <input
+//               type="date"
+//               name="date"
+//               placeholder="Preferred Start Date"
+//               value={formData.date}
+//               onChange={handleChange}
+//               required
+//               className="border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-400 outline-none"
+//             /> */}
+
+//             <DatePicker
+//               selected={startDate}
+//               onChange={(date) => setStartDate(date)}
+//               placeholderText="Preferred Start Date"
+//               className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-400 outline-none font-montserrat"
+//             />
+
+//             <textarea
+//               name="message"
+//               placeholder="Tell us a bit about your project"
+//               value={formData.message}
+//               onChange={handleChange}
+//               rows={4}
+//               className="md:col-span-2 border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-400 outline-none"
+//             />
+//             <button
+//               type="submit"
+//               className="md:col-span-2 bg-orange-500 text-white font-semibold py-3 rounded-lg hover:bg-orange-600 transition"
+//             >
+//               Submit Booking Request
+//             </button>
+//           </form>
+//         </section>
+
+//         {/* Other Services */}
 //         <section className="mt-20">
 //           <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-8">
 //             Explore Other Services
@@ -113,6 +222,7 @@
 //   );
 // }
 
+// app/services/[slug]/page.tsx
 "use client";
 import Image from "next/image";
 import Link from "next/link";
@@ -123,7 +233,8 @@ import Nav from "@/app/quote/nav";
 import Footer from "@/components/footer";
 import { services } from "../serviceData";
 import ServiceCarousel from "@/components/serviceCarousel";
-import { useToast } from "@/components/ui/use-toast"; // optional toast if you use shadcn
+import { useToast } from "@/components/ui/use-toast";
+import { IoArrowForwardCircleOutline } from "react-icons/io5";
 
 export default function ServicePage({ params }: { params: { slug: string } }) {
   const service = services.find((s) => s.slug === params.slug);
@@ -147,7 +258,6 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // You can later connect this to an API route or backend
     toast({
       title: "Booking request sent!",
       description: "We'll get back to you to confirm your project details.",
@@ -199,9 +309,6 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           )}
 
           <div>
-            {/* <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
-              {service.title}
-            </h1> */}
             <p className="mt-4 text-gray-600 leading-relaxed">
               {service.description}
             </p>
@@ -215,6 +322,19 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                 </li>
               ))}
             </ul>
+
+            {/* ✅ Block Boss Button (only for block-industry) */}
+            {service.slug === "block-industry" && (
+              <div className="mt-8">
+                <Link
+                  href="/block-boss"
+                  className="inline-flex items-center  bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition"
+                >
+                  Visit Block Boss{" "}
+                  <IoArrowForwardCircleOutline className="ml-3 text-lg sm:text-xl shake-horizontal" />
+                </Link>
+              </div>
+            )}
           </div>
         </section>
 
@@ -239,7 +359,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
               value={formData.name}
               onChange={handleChange}
               required
-              className="border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-400 outline-none"
+              className="border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-400 outline-none w-full"
             />
             <input
               type="email"
@@ -248,7 +368,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
               value={formData.email}
               onChange={handleChange}
               required
-              className="border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-400 outline-none"
+              className="border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-400 outline-none w-full"
             />
             <input
               type="tel"
@@ -256,17 +376,8 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
               placeholder="Phone Number"
               value={formData.phone}
               onChange={handleChange}
-              className="border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-400 outline-none"
+              className="border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-400 outline-none w-full"
             />
-            {/* <input
-              type="date"
-              name="date"
-              placeholder="Preferred Start Date"
-              value={formData.date}
-              onChange={handleChange}
-              required
-              className="border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-400 outline-none"
-            /> */}
 
             <DatePicker
               selected={startDate}
@@ -281,11 +392,11 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
               value={formData.message}
               onChange={handleChange}
               rows={4}
-              className="md:col-span-2 border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-400 outline-none"
+              className="md:col-span-2 border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-400 outline-none w-full"
             />
             <button
               type="submit"
-              className="md:col-span-2 bg-orange-500 text-white font-semibold py-3 rounded-lg hover:bg-orange-600 transition"
+              className="md:col-span-2 bg-orange-500 text-white font-semibold py-3 rounded-lg hover:bg-orange-600 transition w-full"
             >
               Submit Booking Request
             </button>
@@ -321,8 +432,9 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                   <p className="text-gray-600 text-sm mt-2 line-clamp-3">
                     {s.description}
                   </p>
-                  <p className="text-orange-500 text-sm font-medium mt-3">
-                    Learn More →
+                  <p className="text-orange-500 text-sm font-medium mt-3 flex items-center">
+                    Learn More{" "}
+                    <IoArrowForwardCircleOutline className="ml-1 text-lg sm:text-xl " />
                   </p>
                 </Link>
               );
