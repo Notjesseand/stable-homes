@@ -28,7 +28,7 @@ const services = [
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1A1A1D] text-gray-300 py-10 px-6 md:px-12 font-montserrat">
+    <footer className="bg-[#1A1A1D] text-gray-300 py-10 px-6 md:px-12 font-montserrat z-50">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-10">
         {/* Logo & About */}
         <div className="md:col-span-2">

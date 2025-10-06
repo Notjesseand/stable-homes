@@ -48,10 +48,10 @@ export default function BlockBoss() {
         </div>
 
         {/* Dark Overlay */}
-        <div className="fixed top-0 left-0 w-full h-screen bg-black/40 z-[0]"></div>
+        <div className="fixed top-0 left-0 w-full h-screen bg-black/70 z-[0]"></div>
 
         {/* HERO SECTION */}
-        <section className="relative flex flex-col justify-center items-center text-center h-screen z-10 px-6 sm:px-10 bg-white/10 backdrop-blur-sm">
+        <section className="relative flex flex-col justify-center items-center text-center h-screen z-10 px-6 sm:px-10 bg-white/10 backdrop-blur-m">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -224,7 +224,7 @@ export default function BlockBoss() {
           {/* Booking Section */}
           <section
             id="booking"
-            className="bg-orange-50 p-6 sm:p-8 rounded-2xl shadow-md max-w-4xl mx-auto"
+            className="bg-orange-50 px-3 py-6 sm:p-8 rounded-2xl shadow-md max-w-4xl mx-auto"
           >
             <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">
               Ready to Get Started?
@@ -282,8 +282,9 @@ export default function BlockBoss() {
           </section>
         </div>
       </main>
-
-      <Footer />
+      <div className="z-50 relative">
+        <Footer />
+      </div>
     </>
   );
 }
