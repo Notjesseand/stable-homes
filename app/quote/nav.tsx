@@ -30,7 +30,7 @@ const Nav = () => {
         <img
           src="/stable-homes-logo-vector.png"
           alt="Logo"
-          className="h-[58px] md:h-16"
+          className="h-[54px] md:h-16"
         />
       </Link>
 
