@@ -325,7 +325,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
 
             {/* ✅ Block Boss Button (only for block-industry) */}
             {service.slug === "block-industry" && (
-              <div className="mt-8">
+              <div className="mt-8 justify-center flex sm:justify-start">
                 <Link
                   href="/block-boss"
                   className="inline-flex items-center  bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition"
