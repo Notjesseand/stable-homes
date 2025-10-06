@@ -157,7 +157,7 @@ const Nav = () => {
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
             <button className="p-2 rounded-md hover:bg-slate-300">
-              <TbMenu className="text-3xl" />
+              <TbMenu className="text-3xl text-white" />
             </button>
           </SheetTrigger>
           <SheetContent side="right" className="w-64">
