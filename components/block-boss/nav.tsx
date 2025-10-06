@@ -27,7 +27,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-slate-200 px-6 md:px-16 py-3 sm:py-1 flex justify-between items-center z-50 shadow-md">
+    <nav className="fixed top-0 left-0 w-full bg-[#1a1a1a]/95 backdrop-blur-sm px-6 md:px-16 py-3 sm:py-2 flex justify-between items-center z-50 shadow-md transition-colors">
       {/* Logo */}
       <Link href="/">
         <img src="/block-boss-logo.png" alt="Logo" className="h-12 md:h-20" />
@@ -153,7 +153,7 @@ const Nav = () => {
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
             <button className="p-2 rounded-md hover:bg-slate-300">
-              <TbMenu className="text-3xl" />
+              <TbMenu className="text-3xl text-white" />
             </button>
           </SheetTrigger>
           <SheetContent side="right" className="w-64">

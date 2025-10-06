@@ -51,7 +51,7 @@ export default function BlockBoss() {
         <div className="fixed top-0 left-0 w-full h-screen bg-black/70 z-[0]"></div>
 
         {/* HERO SECTION */}
-        <section className="relative flex flex-col justify-center items-center text-center h-screen z-10 px-6 sm:px-10 bg-white/10 backdrop-blur-m">
+        <section className="relative flex flex-col justify-center items-center text-center h-screen z-10 px-6 sm:px-10 bg-white/10 backdrop-blur-sm">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
