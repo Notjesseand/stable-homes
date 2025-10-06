@@ -19,9 +19,9 @@ export const services = [
   },
   {
     slug: "block-industry",
-    title: "Mobile Block-Making Service",
+    title: "Block Boss",
     description:
-      "Our on-site block-making service is the backbone of our construction solutions, producing high-quality concrete blocks that meet both local and international standards. We combine cutting-edge technology with strict quality control to manufacture blocks that are durable, uniform, and cost-effective. You don’t have to worry about the logistics of transporting blocks to your site — with our powerful industrial block-making machines, we bring production directly to you, meeting your demand while eliminating the extra cost of transportation.",
+      "Block Boss, our on-site block-making service is the backbone of our construction solutions, producing high-quality concrete blocks that meet both local and international standards. We combine cutting-edge technology with strict quality control to manufacture blocks that are durable, uniform, and cost-effective. You don’t have to worry about the logistics of transporting blocks to your site — with our powerful industrial block-making machines, we bring production directly to you, meeting your demand while eliminating the extra cost of transportation.",
     features: [
       "Production of solid, hollow, and interlocking blocks",
       "On-site production to save cost",
