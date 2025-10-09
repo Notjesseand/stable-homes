@@ -1146,7 +1146,7 @@ export default function BlockBoss() {
                 {
                   title: "Lekki Estate Project",
                   img: "/services/construction.jpg",
-                  desc: "Delivered 10,000 interlocking blocks for a 50-unit housing estate, completed 20% ahead of schedule.",
+                  desc: "Delivered 10,000 interlocking blocks for a 50-unit housing estate, completed 15% ahead of schedule.",
                 },
                 {
                   title: "Abuja School Complex",
