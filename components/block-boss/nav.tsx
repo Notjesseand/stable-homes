@@ -67,72 +67,17 @@ const Nav = () => {
               </NavigationMenuLink>
             </NavigationMenuItem>
 
-            {/* Services Dropdown */}
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>
-                <div
-                  onClick={() => scrollToSection("our-services")}
-                  className="hover:text-orange-500 transition"
-                >
-                  Services
-                </div>
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[250px] gap-3 p-4">
-                  {[
-                    {
-                      href: "/services/building",
-                      label: "Building Construction",
-                    },
-                    {
-                      href: "/services/block-industry",
-                      label: "Industrial Scale Block Production",
-                    },
-                    {
-                      href: "/services/flooring-roofing",
-                      label: "Flooring and Roofing",
-                    },
-                    {
-                      href: "/services/architecture-design",
-                      label: "Architecture Design",
-                    },
-                    {
-                      href: "/services/renovation",
-                      label: "Renovation & Remodeling",
-                    },
-                    { href: "/services/civil", label: "Civil Engineering" },
-                    { href: "/services/interior", label: "Interior Design" },
-                    {
-                      href: "/services/project-management",
-                      label: "Project Management",
-                    },
-                  ].map((service) => (
-                    <li key={service.href}>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href={service.href}
-                          className="block p-2 rounded-md hover:bg-slate-100"
-                        >
-                          {service.label}
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-
-            {/* Quotation */}
+            {/* Services */}
             <NavigationMenuItem>
               <NavigationMenuLink
                 asChild
                 className={navigationMenuTriggerStyle()}
               >
                 <button
-                  onClick={() => scrollToSection("quote")}
-                  className="rounded-lg px-4 py-2 text-sm font-medium transition"
+                  onClick={() => scrollToSection("services")}
+                  className="hover:text-orange-500 transition"
                 >
-                  Quotation
+                  Services
                 </button>
               </NavigationMenuLink>
             </NavigationMenuItem>
