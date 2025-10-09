@@ -793,14 +793,14 @@ export default function BlockBoss() {
                 Book Our Mobile Machine
               </button>
             </a>
-            <a href="#services">
+            {/* <a href="#services">
               <button
                 aria-label="Learn more about our services"
                 className="bg-transparent border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition"
               >
                 Learn More
               </button>
-            </a>
+            </a> */}
           </div>
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 text-white">
             {isVisible && (
@@ -900,8 +900,8 @@ export default function BlockBoss() {
                 <h3 className="text-xl font-semibold text-orange-600 mb-2">
                   Why Choose Us
                 </h3>
-                <ul className="list-disc list-inside text-gray-700 space-y-2">
-                  <li>
+                <ul className="list-disc list-inside text-gray-700 space-y-2 text-left">
+                  <li className="">
                     🚛 Mobile production at your site — fast, clean, and
                     efficient.
                   </li>
@@ -1235,7 +1235,7 @@ export default function BlockBoss() {
                     <h3 className="text-xl font-semibold text-orange-600 mt-4">
                       {product.name}
                     </h3>
-                    <p className="text-gray-700">{product.specs}</p>
+                    {/* <p className="text-gray-700">{product.specs}</p> */}
                   </motion.div>
                 ))
               ) : (
