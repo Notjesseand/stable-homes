@@ -935,21 +935,21 @@ export default function BlockBoss() {
             </motion.h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {[
-                { name: "John Doe", role: "CEO", img: "/team/john.jpg" },
+                { name: "Mr. Jide", role: "CEO", img: "/avatars/pfp-2.jpg" },
                 {
                   name: "Jane Smith",
                   role: "Operations Manager",
-                  img: "/team/jane.jpg",
+                  img: "/avatars/pfp-3.jpg",
                 },
                 {
                   name: "Mike Okon",
                   role: "Lead Engineer",
-                  img: "/team/mike.jpg",
+                  img: "/avatars/pfp-7.jpg",
                 },
                 {
                   name: "Ada Eze",
                   role: "Quality Control",
-                  img: "/team/ada.jpg",
+                  img: "/avatars/pfp-5.jpg",
                 },
               ].map((member, i) => (
                 <motion.div
@@ -1427,21 +1427,21 @@ export default function BlockBoss() {
               {[
                 {
                   title: "Benefits of Mobile Block Production",
-                  img: "/blog/mobile-production.jpg",
+                  img: "/block-boss/interlocking-8.jpg",
                   excerpt:
                     "Learn how on-site block production can save time and costs for your construction project.",
                   url: "/blog-1/",
                 },
                 {
                   title: "Choosing the Right Block Type",
-                  img: "/blog/block-types.jpg",
+                  img: "/block-boss/brick-3.jpg",
                   excerpt:
                     "Explore the differences between hollow, solid, and interlocking blocks for your needs.",
                   url: "/blog-2/",
                 },
                 {
                   title: "Sustainable Construction Practices",
-                  img: "/blog/sustainability.jpg",
+                  img: "/block-boss/brick.jpg",
                   excerpt:
                     "Discover how Block Boss minimizes waste and promotes eco-friendly building.",
                   url: "/blog-3/",
@@ -1453,7 +1453,7 @@ export default function BlockBoss() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: i * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white shadow-md rounded-2xl p-6 border border-gray-100"
+                  className="bg-white shadow-md rounded-2xl p-6 border flex  flex-col justify-between border-gray-100"
                 >
                   <Image
                     src={post.img}

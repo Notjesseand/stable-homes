@@ -29,7 +29,7 @@ const Nav = () => {
   return (
     <nav className="fixed top-0 left-0 w-full bg-[#1a1a1a]/95 backdrop-blur-sm px-6 md:px-16 py-3 sm:py-2 flex justify-between items-center z-50 shadow-md transition-colors">
       {/* Logo */}
-      <Link href="/">
+      <Link href="/block-boss">
         <img src="/block-boss-logo.png" alt="Logo" className="h-14 md:h-20" />
       </Link>
 
