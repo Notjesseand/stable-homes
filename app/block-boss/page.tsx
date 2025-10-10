@@ -10,6 +10,7 @@ import Nav from "@/components/block-boss/nav";
 import Footer from "@/components/footer";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
+import Link from "next/link";
 
 export default function BlockBoss() {
   const [startDate, setStartDate] = useState<Date | null>(null);
@@ -898,9 +899,12 @@ export default function BlockBoss() {
                     loading="lazy"
                     className="rounded-lg mb-4"
                   />
-                  <h3 className="text-xl font-semibold text-orange-600 mb-2">
+                  <Link
+                    href={post.url}
+                    className="text-xl font-semibold text-orange-600 mb-2"
+                  >
                     {post.title}
-                  </h3>
+                  </Link>
                   <p className="text-gray-700">{post.excerpt}</p>
                   <a
                     href={post.url}
