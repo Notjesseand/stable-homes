@@ -852,14 +852,16 @@ export default function BlockBoss() {
                   viewport={{ once: true }}
                   className="bg-white shadow-md rounded-2xl p-6 border flex  flex-col justify-between border-gray-100"
                 >
-                  <Image
-                    src={post.img}
-                    alt={post.title}
-                    width={300}
-                    height={200}
-                    loading="lazy"
-                    className="rounded-lg mb-4"
-                  />
+                  <Link href={post.url}>
+                    <Image
+                      src={post.img}
+                      alt={post.title}
+                      width={300}
+                      height={200}
+                      loading="lazy"
+                      className="rounded-lg mb-4"
+                    />
+                  </Link>
                   <Link
                     href={post.url}
                     className="text-xl font-semibold text-orange-600 mb-2"
