@@ -736,7 +736,7 @@ export default function BlockBoss() {
           </section>
 
           {/* FAQ Section */}
-          <section className="mb-24 px-4 md:px-12 text-center">
+          <section className="mb-24 px-0 md:px-12 text-center">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
