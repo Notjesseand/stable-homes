@@ -13,7 +13,7 @@ import CountUp from "react-countup";
 
 export default function BlockBoss() {
   const [startDate, setStartDate] = useState<Date | null>(null);
-  const [filter, setFilter] = useState("all");
+  const [filter, setFilter] = useState("block");
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -263,9 +263,9 @@ export default function BlockBoss() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-4xl font-semibold mb-6 text-gray-800 text-center md:text-left"
+              className="text-4xl font-semibold mb-6 text-gray-800 text-center md:text-left max-w-5xl mx-auto"
             >
-              About Block Boss
+              <p>About Block Boss</p>
             </motion.h2>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
