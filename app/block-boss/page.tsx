@@ -676,14 +676,17 @@ export default function BlockBoss() {
                 </p>
               )}
             </div>
-            <a
+            {/* <a
               href="/block-boss/catalog.pdf"
               download
               className="mt-6 inline-block bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600"
               aria-label="Download product catalog"
             >
               Download Product Catalog
-            </a>
+            </a> */}
+            <button className="mt-6 inline-block bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600">
+              Download Product Catalog
+            </button>
           </section>
 
           {/* Customer Reviews Section */}
