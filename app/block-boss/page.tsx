@@ -11,6 +11,12 @@ import Footer from "@/components/footer";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import Link from "next/link";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default function BlockBoss() {
   const [startDate, setStartDate] = useState<Date | null>(null);
@@ -411,7 +417,7 @@ export default function BlockBoss() {
           </section>
 
           {/* Services Section */}
-          <section className="mb-20 text-center md:text-left">
+          <section className="mb-20 text-center md:text-left" id="services">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -489,79 +495,6 @@ export default function BlockBoss() {
               ))}
             </motion.div>
           </section>
-
-          {/* Service Packages Section */}
-          {/* <section id="packages" className="mb-20 text-center">
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-4xl font-semibold mb-8 text-gray-800"
-            >
-              Our Service Packages
-            </motion.h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-              {[
-                {
-                  title: "Basic Package",
-                  features: [
-                    "On-Site Production",
-                    "Standard Blocks",
-                    "1-Week Support",
-                  ],
-                  price: "Contact for Pricing",
-                },
-                {
-                  title: "Pro Package",
-                  features: [
-                    "On-Site Production",
-                    "Custom Molds",
-                    "Material Sourcing",
-                    "2-Week Support",
-                  ],
-                  price: "Contact for Pricing",
-                },
-                {
-                  title: "Enterprise Package",
-                  features: [
-                    "High-Volume Production",
-                    "Custom Molds",
-                    "Material Sourcing",
-                    "Quality Testing",
-                    "Ongoing Support",
-                  ],
-                  price: "Contact for Pricing",
-                },
-              ].map((pkg, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: i * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white shadow-md rounded-2xl p-6 hover:shadow-xl border border-gray-100"
-                >
-                  <h3 className="text-xl font-semibold text-orange-600 mb-4">
-                    {pkg.title}
-                  </h3>
-                  <ul className="text-gray-700 list-disc list-inside mb-4">
-                    {pkg.features.map((feature, j) => (
-                      <li key={j}>{feature}</li>
-                    ))}
-                  </ul>
-                  <p className="text-gray-600 font-semibold">{pkg.price}</p>
-                  <a
-                    href="#booking"
-                    className="mt-4 inline-block bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600"
-                    aria-label={`Get started with ${pkg.title}`}
-                  >
-                    Get Started
-                  </a>
-                </motion.div>
-              ))}
-            </div>
-          </section> */}
 
           {/* Case Studies Section */}
           <section id="case-studies" className="mb-20 text-center">
@@ -803,47 +736,75 @@ export default function BlockBoss() {
           </section>
 
           {/* FAQ Section */}
-          <section id="faq" className="mb-20 text-center">
+          <section className="mb-24 px-4 md:px-12 text-center">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-4xl font-semibold mb-8 text-gray-800"
+              className="text-3xl md:text-4xl font-semibold mb-10 text-gray-800"
             >
               Frequently Asked Questions
             </motion.h2>
-            <div className="max-w-4xl mx-auto space-y-4">
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-gray-600 max-w-2xl mx-auto mb-10"
+            >
+              Have questions about our process, services, or logistics? Here are
+              the most common things our clients ask about{" "}
+              <strong>Block Boss</strong>.
+            </motion.p>
+
+            {/* Accordion FAQs Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
               {[
                 {
-                  question: "How does on-site block production work?",
-                  answer:
-                    "Our mobile block-making machines are transported to your site, where our team sets up and produces blocks using locally sourced or provided materials. This eliminates transportation costs and ensures fresh, high-quality blocks.",
+                  Q: "How does on-site block production work?",
+                  A: "Our mobile block-making machines are brought directly to your project location. We set up production on-site using locally sourced or client-provided materials, ensuring high-quality, freshly molded blocks without costly transportation delays.",
                 },
                 {
-                  question: "What types of blocks can you produce?",
-                  answer:
-                    "We produce hollow blocks, solid blocks, interlocking pavers, and custom designs based on your project requirements.",
+                  Q: "What types of blocks and bricks do you produce?",
+                  A: "We produce a wide range of products including solid blocks, hollow blocks, interlocking pavers, decorative bricks, and custom molds depending on your design and strength specifications.",
                 },
                 {
-                  question: "How long does it take to start production?",
-                  answer:
-                    "Once booked, we can set up and begin production within 48-72 hours, depending on your location and project scale.",
+                  Q: "How soon can production begin after booking?",
+                  A: "Typically, production can start within 48–72 hours after booking confirmation. This includes transporting our machine, setting up, and material verification.",
                 },
-              ].map((faq, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: i * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white shadow-md rounded-2xl p-6 border border-gray-100 text-left"
-                >
-                  <h3 className="text-xl font-semibold text-orange-600 mb-2">
-                    {faq.question}
-                  </h3>
-                  <p className="text-gray-700">{faq.answer}</p>
-                </motion.div>
+                {
+                  Q: "Can you operate in rural or hard-to-access areas?",
+                  A: "Yes! Our mobile block production units are built for flexibility. As long as the area is accessible by truck and has space for setup, we can operate efficiently anywhere.",
+                },
+                {
+                  Q: "Do you provide materials or must clients supply them?",
+                  A: "We can work with materials you supply, or we can handle complete material sourcing — cement, sand, and aggregates — based on your preferred package and budget.",
+                },
+                {
+                  Q: "Are your blocks tested for quality and durability?",
+                  A: "Absolutely. We maintain strict quality standards. Every batch is checked for uniformity, compressive strength, and curing process to ensure long-lasting durability.",
+                },
+                {
+                  Q: "Do you handle large-scale or commercial projects?",
+                  A: "Yes. We frequently work on estate developments, schools, churches, government contracts, and other bulk production projects that require high output and consistency.",
+                },
+                {
+                  Q: "How can I book the mobile block-making machine?",
+                  A: "Simply fill out our booking form on this page, choose your preferred start date, and our team will contact you to confirm availability and finalize logistics.",
+                },
+              ].map((faq, index) => (
+                <Accordion type="single" collapsible key={index}>
+                  <AccordionItem value={`item-${index}`}>
+                    <AccordionTrigger className="text-left text-lg font-medium text-gray-800">
+                      {faq.Q}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-gray-700 leading-relaxed">
+                      {faq.A}
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
               ))}
             </div>
           </section>

@@ -5,11 +5,9 @@ import Link from "next/link";
 import { TbMenu } from "react-icons/tb";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -21,7 +19,7 @@ const Nav = () => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      setOpen(false); // close sheet after scrolling
+      setOpen(false); // close mobile sheet after scrolling
     }
   };
 
@@ -42,54 +40,27 @@ const Nav = () => {
                 asChild
                 className={navigationMenuTriggerStyle()}
               >
-                <button
-                  onClick={() => scrollToSection("home")}
+                <Link
+                  href="/block-boss"
                   className="hover:text-orange-500 transition"
                 >
                   Home
-                </button>
+                </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
 
-            {/* About Us */}
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className={navigationMenuTriggerStyle()}
-              >
-                <button
-                  onClick={() => scrollToSection("about")}
-                  className="hover:text-orange-500 transition"
-                >
-                  About Us
-                </button>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-
-            {/* Services */}
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className={navigationMenuTriggerStyle()}
-              >
-                <button
-                  onClick={() => scrollToSection("services")}
-                  className="hover:text-orange-500 transition"
-                >
-                  Services
-                </button>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
+            {/* Impact */}
           </NavigationMenuList>
         </NavigationMenu>
 
         {/* Contact button */}
-        <button
-          onClick={() => scrollToSection("booking")}
+        <Link
+          href="/quote"
+          onClick={() => scrollToSection("contact")}
           className="bg-orange-500 rounded-lg px-4 py-2 text-sm font-medium text-white hover:bg-orange-600 transition"
         >
           Contact Us
-        </button>
+        </Link>
       </div>
 
       {/* Mobile Menu (Sheet) */}
@@ -105,29 +76,20 @@ const Nav = () => {
             className="w-64 bg-[#1a1a1a] text-white border-l border-gray-700"
           >
             <div className="flex flex-col gap-6 mt-10 text-center font-montserrat">
-              <button
-                onClick={() => scrollToSection("home")}
+              {/* Home */}
+              <Link
+                href="/block-boss"
+                onClick={() => {
+                  scrollToSection("home");
+                }}
                 className="text-lg font-medium hover:text-orange-500 transition"
               >
                 Home
-              </button>
+              </Link>
 
+              {/* Contact */}
               <button
-                onClick={() => scrollToSection("about")}
-                className="text-lg font-medium hover:text-orange-500 transition"
-              >
-                About Us
-              </button>
-
-              <button
-                onClick={() => scrollToSection("services")}
-                className="text-lg font-medium hover:text-orange-500 transition"
-              >
-                Services
-              </button>
-
-              <button
-                onClick={() => scrollToSection("booking")}
+                onClick={() => scrollToSection("contact")}
                 className="bg-orange-500 rounded-lg px-4 py-2 text-white font-medium hover:bg-orange-600 transition mx-auto"
               >
                 Contact Us

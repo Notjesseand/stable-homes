@@ -5,7 +5,7 @@ import Image from "next/image";
 import Head from "next/head";
 import Script from "next/script";
 import { motion } from "framer-motion";
-import Nav from "@/components/block-boss/nav";
+import Nav from "@/components/blog/nav";
 import Footer from "@/components/footer";
 
 export default function ChoosingTheRightBlockType() {

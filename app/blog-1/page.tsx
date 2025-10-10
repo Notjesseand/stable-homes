@@ -5,7 +5,7 @@ import Image from "next/image";
 import Head from "next/head";
 import Script from "next/script";
 import { motion } from "framer-motion";
-import Nav from "@/components/block-boss/nav";
+import Nav from "@/components/blog/nav";
 import Footer from "@/components/footer";
 
 export default function BenefitsOfMobileBlockProduction() {
@@ -449,6 +449,7 @@ gtag("config", "G-XXXXXXX");
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
               className="mb-12"
+              id="impact"
             >
               <h2 className="text-3xl font-semibold text-orange-600 mb-4">
                 Real-World Impact: Case Studies
@@ -596,7 +597,7 @@ gtag("config", "G-XXXXXXX");
                 Want to save time and costs on your construction project? Visit
                 our{" "}
                 <a
-                  href="/block-boss#booking"
+                  href="/quote"
                   className="text-orange-500 hover:underline"
                   aria-label="Visit booking page"
                 >
