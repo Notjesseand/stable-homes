@@ -9,11 +9,11 @@ import {
 } from "react-icons/fa";
 
 const serviceLinks = [
-  { href: "/services/building", label: "Building Construction" },
   {
     href: "/block-boss",
-    label: "Block Boss",
+    label: "Stable Homes",
   },
+  { href: "/services/building", label: "Building Construction" },
   { href: "/services/flooring-roofing", label: "Flooring and Roofing" },
   { href: "/services/architecture-design", label: "Architecture Design" },
   { href: "/services/renovation", label: "Renovation & Remodeling" },
@@ -42,9 +42,9 @@ const Footer: React.FC = () => {
             className="inline-block"
           >
             <img
-              src="/logo.png"
+              src="/block-boss-logo.png"
               alt="Stable Homes Logo"
-              className="h-12 mb-4 invert"
+              className="h-14 mb-4"
             />
           </Link>
 

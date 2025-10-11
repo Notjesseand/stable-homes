@@ -7,7 +7,7 @@ import Script from "next/script";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Nav from "@/components/block-boss/nav";
-import Footer from "@/components/footer";
+import Footer from "@/components/block-boss/footer";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import Link from "next/link";
